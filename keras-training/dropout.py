@@ -31,7 +31,10 @@ y_test = np_utils.to_categorical(y_test, num_classes=10)
 model = Sequential([
     # 加入多个隐藏层
     Dense(units=200, input_dim=784, bias_initializer='one', activation='tanh'),
+    # 让40%神经元不工作
+    Dropout(0.4),
     Dense(units=100, bias_initializer='one', activation='tanh'),
+    Dropout(0.4),
     Dense(units=10, bias_initializer='one', activation='softmax'),
 ])
 # 定义优化器, loss fuction,同时在计算时得到准确率
@@ -57,3 +60,5 @@ loss, accuracy = model.evaluate(x_train, y_train)
 
 print('\ntrain loss: ', loss)
 print('train accuracy:', accuracy)
+
+# 这个例子使用dropout虽然避免过拟合但是准确率略有下降

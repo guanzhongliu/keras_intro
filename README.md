@@ -8,4 +8,4 @@ keras入门练手程序
 2. 非线性回归
 3. MNIST数据集分类
 4. MNIST数据集分类(交叉熵)
-
+5. dropout应用
