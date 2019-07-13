@@ -1,5 +1,5 @@
 # mnist数据集分类加入交叉熵
-
+# 收敛更快
 import numpy as np
 from keras.datasets import mnist
 from keras.utils import np_utils

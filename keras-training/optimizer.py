@@ -1,12 +1,12 @@
-# dropout应用
-# 在训练时让一定量神经元不工作，防止过拟合
+# 优化器
+# 使用优化器Adam，模型优化快，得到全局最小值需要的epoch少
+
 import numpy as np
 from keras.datasets import mnist
 from keras.utils import np_utils
 from keras.models import Sequential
 from keras.layers import Dense
-from keras.layers import Dropout
-from keras.optimizers import SGD
+from keras.optimizers import Adam, SGD
 
 # 载入数据
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -27,22 +27,15 @@ y_train = np_utils.to_categorical(y_train, num_classes=10)
 y_test = np_utils.to_categorical(y_test, num_classes=10)
 
 # 创建模型，输入784个神经元，输出10个神经元
-# tanh双曲正切
 model = Sequential([
-    # 加入多个隐藏层
-    Dense(units=200, input_dim=784, bias_initializer='one', activation='tanh'),
-    # 让40%神经元不工作
-    Dropout(0.4),
-    Dense(units=100, bias_initializer='one', activation='tanh'),
-    Dropout(0.4),
-    Dense(units=10, bias_initializer='one', activation='softmax'),
+    Dense(units=10, input_dim=784, bias_initializer='one', activation='softmax')
 ])
 # 定义优化器, loss fuction,同时在计算时得到准确率
 sgd = SGD(lr=0.2)
-
+adam = Adam(lr=0.001)
 # 此处将loss函数更改为交叉熵，使模型收敛速度更快
 model.compile(
-    optimizer=sgd,
+    optimizer=adam,
     loss='categorical_crossentropy',
     metrics=['accuracy']
 )
@@ -54,11 +47,4 @@ model.fit(x_train, y_train, batch_size=32, epochs=10)
 loss, accuracy = model.evaluate(x_test, y_test)
 
 print('\ntest loss: ', loss)
-print('test accuracy:', accuracy)
-
-loss, accuracy = model.evaluate(x_train, y_train)
-
-print('\ntrain loss: ', loss)
-print('train accuracy:', accuracy)
-
-# 这个例子使用dropout虽然避免过拟合但是准确率略有下降
+print('accuracy:', accuracy)

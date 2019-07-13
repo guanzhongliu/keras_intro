@@ -1,11 +1,12 @@
-# dropout应用
-# 在训练时让一定量神经元不工作，防止过拟合
+# 正则化应用
+# 降低模型复杂度，防止过拟合
 import numpy as np
 from keras.datasets import mnist
 from keras.utils import np_utils
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Dropout
+from keras.regularizers import l2
 from keras.optimizers import SGD
 
 # 载入数据
@@ -30,11 +31,8 @@ y_test = np_utils.to_categorical(y_test, num_classes=10)
 # tanh双曲正切
 model = Sequential([
     # 加入多个隐藏层
-    Dense(units=200, input_dim=784, bias_initializer='one', activation='tanh'),
-    # 让40%神经元不工作
-    Dropout(0.4),
+    Dense(units=200, input_dim=784, bias_initializer='one', activation='tanh', kernel_regularizer=l2(0.0003)),
     Dense(units=100, bias_initializer='one', activation='tanh'),
-    Dropout(0.4),
     Dense(units=10, bias_initializer='one', activation='softmax'),
 ])
 # 定义优化器, loss fuction,同时在计算时得到准确率
@@ -61,4 +59,3 @@ loss, accuracy = model.evaluate(x_train, y_train)
 print('\ntrain loss: ', loss)
 print('train accuracy:', accuracy)
 
-# 这个例子使用dropout虽然避免过拟合但是准确率略有下降
