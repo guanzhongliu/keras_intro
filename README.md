@@ -2,6 +2,8 @@
 
 keras入门练手程序
 
+依照网上视频教程学习的，视频链接：https://www.bilibili.com/video/av40787141
+
 ### 已有内容
 
 #### 基础
@@ -14,5 +16,8 @@ keras入门练手程序
 6. 正则化（Regulerization）
 7. 优化器（Optmizer）
 
-#### CNN卷积神经网络
+#### 神经网络
+
+1. CNN
+2. RNN
 

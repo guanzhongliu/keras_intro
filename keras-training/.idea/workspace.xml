@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a0c1c13-8085-4289-a442-2366db6374dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CNN_mnist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generalization.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/optimizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RNN_mnist.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cross_entropy.py" beforeDir="false" afterPath="$PROJECT_DIR$/cross_entropy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dropout.py" beforeDir="false" afterPath="$PROJECT_DIR$/dropout.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +27,24 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CNN_mnist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
+            <state relative-caret-position="261">
+              <caret line="45" column="14" selection-end-line="74" />
+              <folding>
+                <element signature="e#16#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RNN_mnist.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-288">
+              <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
               <folding>
                 <element signature="e#16#48#0" expanded="true" />
               </folding>
@@ -68,11 +76,13 @@
         <option value="$PROJECT_DIR$/generalization.py" />
         <option value="$PROJECT_DIR$/optimizer.py" />
         <option value="$PROJECT_DIR$/CNN_mnist.py" />
+        <option value="$PROJECT_DIR$/RNN_mnist.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1608" />
+    <option name="x" value="-14" />
+    <option name="y" value="-14" />
     <option name="width" value="1642" />
     <option name="height" value="2090" />
   </component>
@@ -82,7 +92,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -94,6 +103,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -116,8 +126,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.CNN_mnist">
+  <component name="RunManager" selected="Python.RNN_mnist">
     <configuration name="CNN_mnist" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="keras-training" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CNN_mnist.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RNN_mnist" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="keras-training" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -127,7 +159,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CNN_mnist.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RNN_mnist.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -150,28 +182,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="cross_entropy" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="keras-training" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cross_entropy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -228,6 +238,9 @@
       <module name="keras-training" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -245,11 +258,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.RNN_mnist" />
         <item itemvalue="Python.CNN_mnist" />
         <item itemvalue="Python.optimizer" />
         <item itemvalue="Python.generalization" />
         <item itemvalue="Python.dropout" />
-        <item itemvalue="Python.cross_entropy" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +283,8 @@
       <workItem from="1562549309208" duration="122000" />
       <workItem from="1562634783665" duration="17000" />
       <workItem from="1562898846373" duration="1800000" />
-      <workItem from="1563004250585" duration="2453000" />
+      <workItem from="1563004250585" duration="2621000" />
+      <workItem from="1563008124808" duration="737000" />
     </task>
     <task id="LOCAL-00001" summary="mnist数据集分类">
       <created>1562407849081</created>
@@ -293,11 +307,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562413394781</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="CNN应用于手写识别">
+      <created>1563006724293</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1563006724293</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13205000" />
+    <option name="totallyTimeSpent" value="14110000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -310,9 +331,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1633" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14077362" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.29359543" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -323,7 +343,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" order="8" visible="true" weight="0.44203684" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="8" visible="true" weight="0.4409534" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -382,7 +402,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mnist数据集分类" />
     <MESSAGE value="dropout应用" />
-    <option name="LAST_COMMIT_MESSAGE" value="dropout应用" />
+    <MESSAGE value="CNN应用于手写识别" />
+    <option name="LAST_COMMIT_MESSAGE" value="CNN应用于手写识别" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://C:/Program Files/Python37/Lib/site-packages/keras/optimizers.py">
@@ -498,8 +519,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CNN_mnist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
+        <state relative-caret-position="261">
+          <caret line="45" column="14" selection-end-line="74" />
+          <folding>
+            <element signature="e#16#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNN_mnist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288">
+          <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
           <folding>
             <element signature="e#16#48#0" expanded="true" />
           </folding>
