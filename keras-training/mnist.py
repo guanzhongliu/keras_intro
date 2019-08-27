@@ -5,7 +5,7 @@ from keras.datasets import mnist
 from keras.utils import np_utils
 from keras.models import Sequential
 from keras.layers import Dense
-from keras.optimizers import SGD
+from keras.optimizers import Adam
 
 # 载入数据
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -30,7 +30,7 @@ model = Sequential([
     Dense(units=10, input_dim=784, bias_initializer='one', activation='softmax')
 ])
 # 定义优化器, loss fuction,同时在计算时得到准确率
-sgd = SGD(lr=0.2)
+sgd = Adam(lr=0.2)
 
 model.compile(
     optimizer=sgd,

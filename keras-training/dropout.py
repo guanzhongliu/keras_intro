@@ -1,5 +1,7 @@
 # dropout应用
+
 # 在训练时让一定量神经元不工作，防止过拟合
+
 import numpy as np
 from keras.datasets import mnist
 from keras.utils import np_utils
