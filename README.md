@@ -1,4 +1,4 @@
-# keras-training
+# keras_intro
 
 keras入门练手程序
 
