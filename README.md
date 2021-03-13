@@ -1,26 +1,26 @@
 # keras_intro
 
-keras入门练手程序
+Keras beginner's practicing programmes.
 
-依照网上视频教程学习的，视频链接：https://www.bilibili.com/video/av40787141
+According to the online video tutorial, video [link](https://www.bilibili.com/video/av40787141)
 
-### 已有内容
+### Contents
 
-#### 基础
+#### Basic
 
-1. 线性回归
-2. 非线性回归
-3. MNIST数据集分类
-4. MNIST数据集分类(交叉熵)
-5. dropout应用
-6. 正则化（Regulerization）
-7. 优化器（Optmizer）
+1. Linear Regression
+2. Nonlinear Regression
+3. MNIST Classification
+4. MNIST Classification(Cross Entropy)
+5. Dropout
+6. Regulerization
+7. Optmizer
 
-#### 神经网络
+#### Neural Network
 
 1. CNN
 2. RNN
 
-#### 深度学习入门：基于Python的理论与实现
+#### Deep Learning from scratch
 
-样例程序
+Example Programmes
